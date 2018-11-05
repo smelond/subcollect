@@ -1,5 +1,11 @@
 # subcollect 使用：
-
+基于Python3
+## 安装模块：
+```bash
+sudo pip install beautifulsoup4
+sudo pip install requests
+sudo pip install PyMySQL
+```
 ``` bash
 git clone https://github.com/smelond/subcollect
 cd subcollect
