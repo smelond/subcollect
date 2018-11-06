@@ -9,6 +9,7 @@ sudo pip install PyMySQL
 ``` bash
 git clone https://github.com/smelond/subcollect
 cd subcollect
+vim setting.py   # 找到socks5修改为你自己的地址，或者将上面的socks5_switch = True修改为socks5_switch = False
 python subcollect.py -u baidu.com
 等待获取结果...
 cd output
@@ -17,8 +18,9 @@ vim result_baidu.com.txt
 结果图：
 ![Image text](https://smelond.com/image_upload/2018/11/20181105234951.png)
 
-# 执行之前需要注意的一点：
-需要注意一点的是，如果直接执行脚本，netcraft是不会执行的，需要先打开netcraft网站，然后拿到cookie，将cookie写到self.headerparam = {} 这个字典里面，因为他过期的好像很快，像下面这样添加：
+# 执行之前需要注意的几点：
+这是工具使用的是socks5链接国外的网站进行在线查询，具体可以查看setting.py文件
+如果直接执行脚本，netcraft是不会执行的，需要先打开netcraft网站，然后拿到cookie，将cookie写到self.headerparam = {} 这个字典里面，因为他过期的好像很快，像下面这样添加：
 ![Image text](https://smelond.com/image_upload/2018/11/20181105200704.png)
 
 # 他是如何工作的：
